@@ -1158,14 +1158,16 @@ function ApplyNocRequest() {
                                                 <Row>
                                                     <Form.Group as={Col} md="12">
                                                         <span className="d-flex">
-                                                            <Form.Check type="checkbox" aria-label="checkbox 1" />&nbsp;
+                                                            <Form.Check type="checkbox" aria-label="checkbox 1" name="Certified" id="Certified" />&nbsp;
                                                             <span class="text-danger">*</span>
                                                             &nbsp;Certified copy of commercial contract/Proforma invoice is enclosed. Further I undertake to comply FEMA regulations and other guidelines issued by RBI regarding foreign transactions.</span>
+                                                        {errors.Certified && <p style={{ color: "red" }}>{errors.Certified}</p>}
                                                     </Form.Group>
                                                     <Form.Group as={Col} md="6">
                                                         <Form.Label className="mt-3"><strong><span class="text-danger">*</span>Upload Certified copy of commercial Contract/Proforma Invoice</strong></Form.Label>
                                                         <Form.Control type="file" id="exampleFormControlFile1" name="certified_copy_proforma" onChange
                                                             value={formData.certified_copy_proforma} />
+                                                        {errors.certified_copy_proforma && <p style={{ color: "red" }}>{errors.certified_copy_proforma}</p>}
                                                     </Form.Group>
                                                 </Row>
                                             </CardBody>
@@ -1184,6 +1186,7 @@ function ApplyNocRequest() {
                                                         <Form.Label className="mt-3"><strong><span class="text-danger">*</span>Upload duly signed declaration of letter</strong></Form.Label>
                                                         <Form.Control type="file" id="exampleFormControlFile1" name="declaration_letter" onChange
                                                             value={formData.declaration_letter} />
+                                                        {errors.declaration_letter && <p style={{ color: "red" }}>{errors.declaration_letter}</p>}
                                                     </Form.Group>
                                                     <Col md={6}>
                                                         <Form.Label className="mt-3">

@@ -203,19 +203,18 @@ const ValidationNocRequest = (formData) => {
         errors.ibsc_rcgm_approval_applicable_desc = "Please upload relevant document";
     }
 
-
-
-
-
-
-    // if (!formData.password.trim()) {
-    //     errors.password = "Password is required";
-    // } else if (formData.password.length < 6) {
-    //     errors.password = "Password must be at least 6 characters";
-    // }
-
     if (!formData.icertify?.trim()) {
         errors.certifythat = "Verify the Check is required";
+    }
+    if (!formData.Certified?.trim()) {
+        errors.Certified = "Verify the Check is required";
+    }
+
+    if (!formData.certified_copy_proforma?.trim()) {
+        errors.certified_copy_proforma = "Please upload relevant document";
+    }
+    if (!formData.declaration_letter?.trim()) {
+        errors.declaration_letter = "Please upload relevant document";
     }
 
     return errors;
